@@ -14,7 +14,7 @@
     -fw-bold: 900;
 
     --clr-background: rgb(241, 239, 239);
-    --clr-dark: #633333;
+    --clr-dark: #363434;
     --clr-accent: #16e0bd;
 
     /* font size */
@@ -63,6 +63,30 @@ img {
 }
 
 strong { font-weight: var(--fw-bold) }
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
 
 /* Typography */
 h1,
@@ -148,6 +172,52 @@ nav { display: none; }
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em) ;
-
     }
+
+/* My services section */
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(../Images/bed.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-background);
+    text-align: center;
+    }
+    
+.section__title--services {
+    color: var(--clr-accent) ;
+    position: relative;
+    }
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-background);
+    opacity: 0.25;
+    }
+
+    .services {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services + .services {
+        margin-left: 2em;
+    }
+    
+}
+
+
+
 }
