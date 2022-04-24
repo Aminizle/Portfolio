@@ -318,6 +318,12 @@ header {
     .services {
         max-width: 500px;
         margin: 0 auto;
+        opacity: 0;
+        transition: opacity 250ms ease-in;
+    }
+
+    .services.appear {
+        opacity: 1;
     }
 
 @media (min-width: 800px) {
@@ -380,10 +386,10 @@ header {
     text-align: center;
 }
 
-.portfolio {
+/* .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
-}
+} */
 
 .portfolio__item {
     background: var(--clr-accent);
