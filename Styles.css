@@ -15,7 +15,7 @@
 
     --clr-background: rgb(241, 239, 239);
     --clr-dark: #363434;
-    --clr-accent: #12ccad;
+    --clr-accent: #0CA4BD;
 
     /* font size */
     --fs-h1: 3rem;
@@ -437,8 +437,9 @@ header {
 
 .social-list__item {
     margin: 0 .5em;
-}
-
-.social-list__link {
     padding: .5em;
 }
+
+/* .social-list li a:hover {
+    transform: scale(2) translateY(-10px);
+} */
