@@ -575,11 +575,12 @@ i {
 
 /* footer */
 .footer {
-    background: #111;
+   
     color: var(--clr-accent);
     text-align: center;
     pad: 2.5em 0;
     font-size: var(--fs-h3);
+     background-color: #0CA4BD;
 }
 
 .footer a {
@@ -589,6 +590,7 @@ i {
 .footer-link {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
+    
 }
 
 .footer-link:hover,
@@ -601,7 +603,7 @@ i {
     display: flex;
     justify-content: center;
     margin: 2em 0 0;
-    padding: 0;
+    padding: 0;   
 }
 
 .social-list__item {
@@ -609,6 +611,11 @@ i {
     padding: .5em;
 }
 
-/* .social-list li a:hover {
-    transform: scale(2) translateY(-10px);
-} */
+.footer_icon {
+    color: #fff;
+}
+
+.footer_icon:hover {
+    transform: scale(1.5) translateY(-5px);
+    transition: 500ms;
+}
