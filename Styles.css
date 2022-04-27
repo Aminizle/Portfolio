@@ -112,6 +112,10 @@ h3 {
     font-size: var(--fs-h3)
 }
 
+h4 {
+    font-size: var(--fs-h4);
+}
+
 .section__title {
     margin-bottom: .25em;
 
@@ -543,6 +547,7 @@ label {
 
 .contact_info {
     list-style: none;
+    
 }
 
 /* footer */
