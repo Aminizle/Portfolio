@@ -408,17 +408,14 @@ header {
 .left {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
-    /*  */
+    margin-bottom: 50px;    
 }
 
 .right {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-bottom: 50px;
-    /*  */
-
+    margin-bottom: 50px;    
 }
 
 .from-left {
@@ -433,14 +430,12 @@ header {
 .from-left {
     transition: opacity 250ms ease-in, transform 600ms ease-in;
     opacity: 0;
-
 }
 
 .from-right.appear,
 .from-left.appear {
     transform: translateX(0);
     opacity: 1;
-
 }
 
 .portfolio>.left>p,
@@ -450,6 +445,9 @@ header {
 
 .portfolio__item {
     overflow: hidden;
+    box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.1);
+
+
 }
 
 .portfolio__img {
@@ -466,6 +464,31 @@ header {
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5;
+}
+
+.my_work_buttons {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.my_work_links {
+    margin-right: 15px;
+    width: 150px;
+    border: none;
+    background-color: #fff;
+    color: #0CA4BD;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+.my_work_links:hover {
+    background-color: #0CA4BD;
+    color: #fff;
+    cursor: pointer;
 }
 
 #contact_me> h2, h2 + p {
@@ -516,9 +539,10 @@ header {
 .input_field {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #ccc;
-    /* outline: none; */
+    border-bottom: 1px solid #ccc;    
     padding: 5px;
+    border-radius: 10px;
+   
 }
 
 textarea {
@@ -527,12 +551,14 @@ textarea {
     outline: none;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 10px;
+
 }
 
 label {
     margin-bottom: 6px;
     display: block;
-    /* color: #1c00b5; */
+    color: #363434;
 }
 
 .contact_buttons_container>ul {
@@ -545,13 +571,19 @@ label {
 .contact_buttons {
     width: 150px;
     border: none;
-    background-color: #0CA4BD;
-    color: #fff;
+    background-color: #fff;
+    color: #0CA4BD;
     height: 35px;
     border-radius: 30px;
     margin-top: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
+}
+
+.contact_buttons:hover {
+    background-color: #0CA4BD;
+    color: #fff;
+    cursor: pointer;
 }
 
 .contact_info {
@@ -617,5 +649,5 @@ i {
 
 .footer_icon:hover {
     transform: scale(1.5) translateY(-5px);
-    transition: 500ms;
-}
+    transition: 500ms ease-in-out;
+} 
