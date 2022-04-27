@@ -49,7 +49,7 @@
                 <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">My work</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="#footer" class="nav__link">Contact me</a></li>
+                <li class="nav__item"><a href="#contact_me" class="nav__link">Contact me</a></li>
             </ul>
 
 
@@ -161,41 +161,70 @@
             <!-- Portfolio item 01-->
             <div class="left">
                 <a href="https://marvel-cinematic-universe.netlify.app/" class="portfolio__item" target="_blank">
-                    <img src="Images\Marvel.png" alt="marvel cinematic universe explorer" class="slide-in from-left portfolio__img">
+                    <img src="Images\Marvel.png" alt="marvel cinematic universe explorer"
+                        class="slide-in from-left portfolio__img">
                 </a>
-                <p class="slide-in from-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui est delectus nemo? Neque magnam ea
-                    adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea quasi
-                    distinctio ex.</p>
+                <div class="slide-in from-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui
+                        est delectus nemo? Neque magnam ea
+                        adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea
+                        quasi
+                        distinctio ex.</p>
+                    <button>Github</button>
+                    <button>Site</button>
+
+                </div>
             </div>
 
             <!-- Portfolio item 02-->
             <div class="right">
                 <a href="https://nasa-pictures-of-the-day.netlify.app/" class="portfolio__item" target="_blank">
-                    <img src="Images\nasa.png" alt="nasa-pictures-of-the-day" class="slide-in from-right portfolio__img">
+                    <img src="Images\nasa.png" alt="nasa-pictures-of-the-day"
+                        class="slide-in from-right portfolio__img">
                 </a>
-                <p class="slide-in from-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui est delectus nemo? Neque magnam ea
-                    adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea quasi
-                    distinctio ex.</p>
+                <div class="slide-in from-left">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui
+                        est delectus nemo? Neque magnam ea
+                        adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea
+                        quasi
+                        distinctio ex.</p>
+                    <button>Github</button>
+                    <button>Site</button>
+                </div>
             </div>
 
             <!-- Portfolio item 03-->
             <div class="left">
                 <a href="https://ameentravel.netlify.app/" class="portfolio__item" target="_blank">
-                    <img src="Images\Travel full.png" alt="travel site landing page" class="slide-in from-left portfolio__img">
+                    <img src="Images\Travel full.png" alt="travel site landing page"
+                        class="slide-in from-left portfolio__img">
                 </a>
-                <p class="slide-in from-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui est delectus nemo? Neque magnam ea
-                    adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea quasi
-                    distinctio ex.</p>
+                <div class="slide-in from-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui
+                        est delectus nemo? Neque magnam ea
+                        adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea
+                        quasi
+                        distinctio ex.</p>
+                    <button>Github</button>
+                    <button>Site</button>
+                </div>
             </div>
 
             <!-- Portfolio item 04-->
             <div class="right">
                 <a href="https://almakkahmart.netlify.app/" class="portfolio__item" target="_blank">
-                    <img src="Images\Al Makkah Mart.png" alt="grocery store site" class="slide-in from-right portfolio__img">
+                    <img src="Images\Al Makkah Mart.png" alt="grocery store site"
+                        class="slide-in from-right portfolio__img">
                 </a>
-                <p class="slide-in from-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui est delectus nemo? Neque magnam ea
-                    adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea quasi
-                    distinctio ex.</p>
+                <div class="slide-in from-left">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui
+                        est delectus nemo? Neque magnam ea
+                        adipisci? Perferendis et amet aspernatur doloribus blanditiis delectus, adipisci officia. Ea
+                        quasi
+                        distinctio ex.</p>
+                    <button>Github</button>
+                    <button>Site</button>
+                </div>
             </div>
 
             <!-- Portfolio item 05
@@ -229,11 +258,54 @@
     </a>-->
         </div>
     </section>
+    <section id="contact_me">
+        <h2 class="section__title section__title--contact_me">Contact Me</h2>
+        <p class="section__subtitle section__subtitle--contact_me">I look forward to hearing from you.</p>
+        <div class="contact_box">
+            <div class="contact_left">
+                <form method="POST" action="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input class="honeypot" name="bot-field">
+                    <div class="input_name_email">
+                        <div><label>Name</label><input class="input_field" type="text" name="name" id="name"
+                                placeholder="John Doe" required /></div>
+                        <div><label>Email</label><input class="input_field" type="email" name="email" id="email"
+                                placeholder="John.Doe@email.com" required /></div>
 
-<!-- (571) 449-6336 -->
+                    </div>
+                    <div class="input_field"><label>Message</label><textarea name="message" id="message"
+                            placeholder="Type here..." rows="5" required></textarea></div>
+                    &nbsp;
+                    <div class="contact_buttons_container">
+                        <ul class="actions">
+                            <li><input type="submit" value="Submit Message" class="contact_buttons" /></li>
+                            <li><input type="reset" value="Reset All" class="contact_buttons"/></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="contact_right">
+                <ul class="contact_info">
+                    <li>
+                        <h4 class="icon solid fa-home"><span class="label">Address</span></h4>
+                        <a href="https://www.google.com/maps/place/Chantilly,+VA+20151" target="_blank">
+                            Chantilly, VA 20151,<br />
+                            United States</a>
+                    </li>
+                    <li>
+                        <h4 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h4>
+                        <a href="tel:+1571-723-2113">(571) 449-6336</a>
+                    </li>
+                    <li>
+                        <h4 class="icon solid fa-envelope"><span class="label">Email</span></h4>
+                        <a href="mailto:Ameen.Mohiyuddin@gmail.com">Ameen.Mohiyuddin@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--  -->
     <!-- Footer -->
-    <footer class="footer">
-        <a href="mailto:dr.mohiyuddin@gmail.com" class="footer-link">AmeenMohiyuddin2022@gmail.com</a>
+    <footer class="footer">        
         <ul class="social-list" id="footer">
             <li class="social-list__item">
                 <a class="social-list__link" href="https://www.youtube.com/channel/UCtnzaJeLTPhhH6jolpdGhpw"
