@@ -150,7 +150,7 @@ h4 {
     margin-bottom: 2em;
 }
 
-/* header */
+/* || header & Nav */
 
 header {
     display: flex;
@@ -230,7 +230,8 @@ header {
     /* justify-content: center; */
 }
 
-/* Intro section */
+/* || Intro section */
+
 .intro {
     position: relative;
 }
@@ -367,7 +368,8 @@ header {
 
 }
 
-/* My work */
+/* || My work */
+
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-background);
@@ -459,6 +461,8 @@ header {
     color: #fff;
     cursor: pointer;
 }
+ 
+/* || Contact Me */
 
 #contact_me>h2,
 h2+p {
@@ -483,10 +487,6 @@ h2+p {
     /* padding: 40px; */
 
 }
-
-/* #contact_me>h2 {
-    padding-bottom: 40px;
-} */
 
 #contact_me>p {
     margin-bottom: 60px;
@@ -576,7 +576,8 @@ i {
     color: #0CA4BD;
 }
 
-/* footer */
+/* || footer */
+
 .footer {
 
     color: var(--clr-accent);
