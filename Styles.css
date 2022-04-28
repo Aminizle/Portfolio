@@ -154,113 +154,81 @@ h4 {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1em;
 }
 
-.logo {
-    max-width: 100px;
+.nav-toggle {
+    display: none;
 }
-
 .nav {
-    position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-background);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    transform: translatex(100%);
-    transition: transform 850ms cubic-bezier(.5, 0, .5, 1);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .nav__list {
-    list-style: none;
+
     display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.nav__link {
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
-}
-
-.nav__link:hover {
-    color: var(--clr-accent);
-}
-
-.nav-toggle {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;
+    background: hsl(0 0% 100% /0.1);
+    backdrop-filter: blur(1rem);
+    gap: 2em;
 
 }
 
-.nav-open .nav {
-    transform: translateX(0);
+@media (max-width: 800px) {
+    .nav__list {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        background: hsl(0 0% 0% / 0.5);
+        backdrop-filter: blur(1rem);
+        z-index: 100;
+
+        transform: translateX(100%);
+        transition: transform 500ms ease-out;
+
+    }
+
+    #primary-navigation[data-visible="false"] {
+        transform: translateX(0%);
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        background: red;
+        width: 1rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        z-index: 999;
+    }
+
+    .nav-toggle[aria-expanded='true'] {
+        background: #0CA4BD;
+    }
 }
 
-.nav-open .nav-toggle {
-    position: fixed;
+
+
+/* @supports is "if function is supported by browser" */
+/* backdrop-filter: blur; is not supported by firefox so it will default without @support */
+@supports (backdrop-filter: blur(1rem)) {
+    .nav__list {
+        background: hsl(0 0% 100% /0.1);
+        backdrop-filter: blur(1rem);
+    }
 }
 
-.nav-open .hamburger {
-    transform: rotate(.625turn);
+.nav__item {
+    /* justify-content: center; */
 }
-
-.nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-}
-
-.nav-open .hamburger::after {
-    opacity: 0;
-}
-
-.hamburger {
-    display: block;
-    position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    background: var(--clr-accent);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250 ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.hamburger::before {
-    top: 6px;
-}
-
-.hamburger::after {
-    bottom: 6px;
-}
-
 
 /* Intro section */
 .intro {
@@ -344,6 +312,7 @@ header {
     }
 
     @media (min-width: 800px) {
+
         .services {
             display: flex;
             max-width: 1000px;
@@ -408,14 +377,14 @@ header {
 .left {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;    
+    margin-bottom: 50px;
 }
 
 .right {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-bottom: 50px;    
+    margin-bottom: 50px;
 }
 
 .from-left {
@@ -469,7 +438,7 @@ header {
 .my_work_buttons {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .my_work_links {
@@ -491,9 +460,11 @@ header {
     cursor: pointer;
 }
 
-#contact_me> h2, h2 + p {
+#contact_me>h2,
+h2+p {
     text-align: center;
 }
+
 .contact_box {
     display: flex;
     justify-content: space-around;
@@ -539,10 +510,10 @@ header {
 .input_field {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #ccc;    
+    border-bottom: 1px solid #ccc;
     padding: 5px;
     border-radius: 10px;
-   
+
 }
 
 textarea {
@@ -607,12 +578,12 @@ i {
 
 /* footer */
 .footer {
-   
+
     color: var(--clr-accent);
     text-align: center;
     pad: 2.5em 0;
     font-size: var(--fs-h3);
-     background-color: #0CA4BD;
+    background-color: #0CA4BD;
 }
 
 .footer a {
@@ -622,7 +593,7 @@ i {
 .footer-link {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
-    
+
 }
 
 .footer-link:hover,
@@ -635,7 +606,7 @@ i {
     display: flex;
     justify-content: center;
     margin: 2em 0 0;
-    padding: 0;   
+    padding: 0;
 }
 
 .social-list__item {
@@ -650,4 +621,4 @@ i {
 .footer_icon:hover {
     transform: scale(1.5) translateY(-5px);
     transition: 500ms ease-in-out;
-} 
+}

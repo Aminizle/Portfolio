@@ -1,14 +1,22 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link')
+const primaryNav = document.querySelector('#primary-navigation');
+const navToggle = document.querySelector('.nav-toggle')
 
-const faders = document.querySelectorAll('.services')
-const sliders = document.querySelectorAll('.slide-in')
+const faders = document.querySelector('.services')
+const sliders = document.querySelector('.slide-in')
 
 
 //Nav menu toggle 
 navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open')
-})
+    const visibility = primaryNav.getAttribute('data-visible');
+    if(visibility === "false") {
+        primaryNav.setAttribute('data-visible', true)
+        navToggle.setAttribute('aria-expanded', true)
+    }else {
+        primaryNav.setAttribute('data-visible', false)
+        navToggle.setAttribute('aria-expanded', false)
+
+    }
+});
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
