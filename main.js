@@ -1,8 +1,8 @@
 const primaryNav = document.querySelector('#primary-navigation');
 const navToggle = document.querySelector('.nav-toggle')
 
-const faders = document.querySelector('.services')
-const sliders = document.querySelector('.slide-in')
+const faders = document.querySelectorAll('.services')
+const sliders = document.querySelectorAll('.slide-in')
 
 
 //Nav menu toggle 
@@ -17,15 +17,6 @@ navToggle.addEventListener('click', () => {
 
     }
 });
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    })
-})
-
-
-
 
 //Fade in 
 const appearOptions = {
