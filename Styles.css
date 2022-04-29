@@ -122,6 +122,7 @@ h4 {
 }
 
 .section__title--intro {
+    width: 100%;
     font-weight: var(--fw-reg);
 
 }
@@ -168,17 +169,17 @@ header {
     position: fixed;
     margin-top: 15px;     
     z-index: 200;
+    border: 1px solid #0CA4BD;
     border-radius: 30px;
-
+    background: hsl(0 0% 100% /0.1);
+    backdrop-filter: blur(1rem);
 }
 
 .nav__list {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
-    background: hsl(0 0% 100% /0.1);
-    backdrop-filter: blur(1rem);
+    padding: 0;    
     gap: 2em;
 
 }
@@ -250,12 +251,16 @@ header {
 .intro {
     position: relative;
     background-image: url(Images/intro.jpg);
-    
    
+}
 
+.intro_img_container img {
+    float: left;
+    
 }
 
 .intro__img {
+    float: left;
     box-shadow: var(--bs);
     margin-top: 250px;
     background-color: #0CA4BD;
