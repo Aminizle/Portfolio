@@ -48,7 +48,6 @@ body, header {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-
     font-family: 'Domine', serif;
     overflow-x: hidden;
 
@@ -56,11 +55,12 @@ body, header {
 
 section {
     padding: 5em 2em;
+    min-height: 800px;
 }
 
 
 img {
-    display: block;
+    /* display: block; */
     max-width: 100%;
 }
 
@@ -75,21 +75,21 @@ strong {
 
 /* Buttons */
 .btn {
-    display: inline-block;
     padding: .5em 2.5em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
+    background: #fff;
+    color: #0CA4BD;
     text-decoration: none;
-    cursor: pointer;
-    font-size: .8rem;
-    text-transform: uppercase;
+    cursor: pointer;   
+    border-radius: 30px;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
-    transition: 200ms ease-in-out;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.4);
+    background: #0CA4BD;
+    color: #fff;
 }
 
 /* Typography */
@@ -162,19 +162,17 @@ header {
 .nav-toggle {
     display: none;
 }
-/* .nav {
-    position: fixed;
-    margin-top: 15px;    
 
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: uppercase;
-    z-index: 1000;
-} */
+
+.nav {
+    position: fixed;
+    margin-top: 15px;     
+    z-index: 200;
+    border-radius: 30px;
+
+}
 
 .nav__list {
-
     display: flex;
     list-style: none;
     margin: 0;
@@ -183,6 +181,22 @@ header {
     backdrop-filter: blur(1rem);
     gap: 2em;
 
+}
+
+.nav__item {
+    padding: 10px;
+}
+
+.nav__list> .nav__item> a {
+    
+    text-decoration: none;
+    backdrop-filter: blur(1rem);
+    color: #0CA4BD;
+}
+
+.nav__list> .nav__item >a:hover {
+    background-color: #0CA4BD;
+    color: #fff;
 }
 
 @media (max-width: 800px) {
@@ -221,8 +235,6 @@ header {
     }
 }
 
-
-
 /* @supports is "if function is supported by browser" */
 /* backdrop-filter: blur; is not supported by firefox so it will default without @support */
 @supports (backdrop-filter: blur(1rem)) {
@@ -232,22 +244,31 @@ header {
     }
 }
 
-.nav__item {
-    /* justify-content: center; */
-}
 
 /* || Intro section */
 
 .intro {
     position: relative;
+    background-image: url(Images/intro.jpg);
+    
+   
+
 }
 
 .intro__img {
     box-shadow: var(--bs);
+    margin-top: 250px;
+    background-color: #0CA4BD;
+    
 }
 
+.section__title--intro {
+    margin-top: 50px;    
+    background-color: #0CA4BD;
+   
+}
 .section__subtitle--intro {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 
@@ -457,7 +478,7 @@ header {
     color: #0CA4BD;
     height: 35px;
     border-radius: 30px;
-    margin-top: 10px;
+    margin-top: 10px;    
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 }
@@ -545,14 +566,14 @@ label {
 
 }
 
-.contact_buttons {
+.contact_buttons{
     width: 150px;
     border: none;
     background-color: #fff;
     color: #0CA4BD;
     height: 35px;
     border-radius: 30px;
-    margin-top: 10px;
+    margin-top: 10px;   
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 }
