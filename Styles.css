@@ -58,11 +58,12 @@ section {
     min-height: 800px;
 }
 
-
+/* 
 img {
-    /* display: block; */
+    display: block; 
     max-width: 100%;
-}
+} 
+*/
 
 strong {
     font-weight: var(--fw-bold)
@@ -251,18 +252,23 @@ header {
 .intro {
     position: relative;
     background-image: url(Images/intro.jpg);
+    /* background-size: ; */
    
 }
 
 .intro_img_container img {
-    float: left;
+    
+    width: 400px;
+    background: yellow;
     
 }
 
 .intro__img {
     float: left;
     box-shadow: var(--bs);
-    margin-top: 250px;
+    margin-top: 250px;  
+    width: 350px;
+    max-width: 500px;
     background-color: #0CA4BD;
     
 }
