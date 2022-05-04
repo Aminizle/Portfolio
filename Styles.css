@@ -253,34 +253,32 @@ header {
 .intro {
     position: relative;
     background-image: url(Images/intro.jpg);
-    /* background-size: ; */
-   
+    z-index: -10;
+      
 }
 
 .intro_img_container img {
-    
-    width: 500px;
-    background: yellow;
-    
+    display: flex;
+        
 }
 
 .intro__img {
-    float: left;
+    justify-content: start;
     box-shadow: var(--bs);
-    margin-top: 250px;  
-    width: 350px;
-    max-width: 500px;
-    background-color: var(--clr-accent)  ;
+    margin-right: 20px;
     
 }
 
-.section__title--intro {
-    margin-top: 50px;    
-    background-color: var(--clr-accent)  ;
-   
+.intro_text_container > p {
+   z-index: -1;
+   margin-top: 100px;
 }
-.section__subtitle--intro {
-    /* display: inline-block; */
+
+.section__title--intro {
+    margin-top: 150px;  
+    margin-left: 50px;
+      
+   
 }
 
 
