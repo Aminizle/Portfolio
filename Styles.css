@@ -16,9 +16,10 @@
     --clr-light: #fff;
 
     /* font size */
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
+    --fs-h1: 4.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
     --fs-body: 1rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
@@ -26,14 +27,14 @@
 
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
+        /* --fs-h2: 3.75rem; */
         --fs-h3: 1.5rem;
         --fs-h4: 1.125rem;
     }
-}
+}  */
 
 /* General styles */
 
