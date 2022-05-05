@@ -59,6 +59,8 @@ body, header {
 section {
     padding: 5em 2em;
     min-height: 800px;
+    filter: grayscale(20%);
+
 }
 
 
@@ -524,15 +526,13 @@ header {
  
 /* || Contact Me */
 
-#contact_me {
-    
+#contact_me {    
     background: url(Images/contact_me_background_pen.jpg);
     position: relative;    
     background-size: cover;    
     background-repeat: no-repeat;    
     background-position: center;
     overflow: hidden;
-    filter: grayscale(20%);
 }
 
 #contact_me>h2,
@@ -642,27 +642,34 @@ label {
 }
 
 #contact_me i {
-    color: var(--clr-accent1)  ;
+    color: var(--clr-accent1);
 }
 
 /* || footer */
 
 .footer {
-
     color: var(--clr-accent1);
     text-align: center;
-    pad: 2.5em 0;
+    /* pad: 2.5em 0; */
     font-size: var(--fs-h3);
-    background-color: var(--clr-accent1)  ;
+    background-color: var(--clr-accent1);
+    margin: 0px;
+
 }
 
 .footer a {
     color: inherit;
+    margin: 0px;
+
+
 }
 
 .footer-link {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
+    margin: 0px;
+
+
 
 }
 
@@ -676,7 +683,8 @@ label {
     display: flex;
     justify-content: center;
     /* margin: 2em 0 0; */
-    padding: 0;
+    margin: 0px;
+
 }
 
 .social-list__item {
@@ -686,6 +694,8 @@ label {
 
 .footer_icon {
     color: var(--clr-light)  ;
+    margin: 0px;
+
 }
 
 .footer_icon:hover {
