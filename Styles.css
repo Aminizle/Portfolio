@@ -43,7 +43,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body, header {
+body,
+header {
     background-color: var(--clr-background);
     color: var(--clr--dark);
     margin: 0;
@@ -76,10 +77,10 @@ strong {
 /* Buttons */
 .btn {
     padding: .5em 2.5em;
-    background: var(--clr-light)  ;
+    background: var(--clr-light);
     color: var(--clr-accent1);
     text-decoration: none;
-    cursor: pointer;   
+    cursor: pointer;
     border-radius: 30px;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
@@ -89,7 +90,7 @@ strong {
 .btn:hover {
     transform: scale(1.4);
     background: var(--clr-accent1);
-    color: var(--clr-light)  ;
+    color: var(--clr-light);
 }
 
 
@@ -117,56 +118,6 @@ h4 {
     font-size: var(--fs-h4);
 }
 
-.intro_text_container{
-    color: #fff;
-    
-}
-
-.intro_img_container{
-    margin-top: 80px;
-}
-
-.section__title {
-    margin-bottom: .25em;
-    
-    
-}
-
-.section__title--intro {
-    width: 100%;
-    font-weight: var(--fw-reg);
-
-}
-
-.section__title--intro strong {
-    display: block;
-    
-    
-}
-
-
-.section__subtitle {
-    margin: 0;
-    font-size: var(--fs-h3);
-    
-}
-
-.section__subtitle--intro,
-.section__subtitle--about {
-    background: var(--clr-accent1);
-    padding: .25em 1em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;    
-    
-}
-
-.section__subtitle--work {
-    color: var(--clr-accent1);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
-    
-}
-
 /* || header & Nav */
 
 header {
@@ -183,9 +134,9 @@ header {
 
 .nav {
     position: fixed;
-    margin-top: 15px;   
+    margin-top: 15px;
     z-index: 200;
-    border: 1px solid var(--clr-accent1)  ;
+    border: 1px solid var(--clr-accent1);
     border-radius: 30px;
     background: hsl(0 0% 100% /0.1);
     backdrop-filter: blur(1rem);
@@ -195,7 +146,7 @@ header {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;    
+    padding: 0;
     gap: 2em;
 
 }
@@ -204,53 +155,18 @@ header {
     padding: 10px;
 }
 
-.nav__list> .nav__item> a {
-    
+.nav__list>.nav__item>a {
+
     text-decoration: none;
     backdrop-filter: blur(1rem);
-    color: var(--clr-accent1)  ;
+    color: var(--clr-accent1);
 }
 
-.nav__list> .nav__item >a:hover {
-    background-color: var(--clr-accent1)  ;
-    color: var(--clr-light)  ;
+.nav__list>.nav__item>a:hover {
+    background-color: var(--clr-accent1);
+    color: var(--clr-light);
 }
 
-@media (max-width: 800px) {
-    .nav__list {
-        position: fixed;
-        inset: 0 0 0 30%;
-        flex-direction: column;
-        padding: min(30vh, 10rem) 2em;
-
-        background: hsl(0 0% 0% / 0.5);
-        backdrop-filter: blur(1rem);
-        z-index: 100;
-
-        transform: translateX(100%);
-        transition: transform 500ms ease-out;
-
-    }
-
-    #primary-navigation[data-visible="false"] {
-        transform: translateX(0%);
-    }
-
-    .nav-toggle {
-        display: block;
-        position: absolute;
-        background: red;
-        width: 1rem;
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
-        z-index: 999;
-    }
-
-    .nav-toggle[aria-expanded='true'] {
-        background: var(--clr-accent1)  ;
-    }
-}
 
 /* @supports is "if function is supported by browser" */
 /* backdrop-filter: blur; is not supported by firefox so it will default without @support */
@@ -262,9 +178,51 @@ header {
 }
 
 
+/*  || General Section */
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    width: 100%;
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent1);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+
+}
+
+.section__subtitle--work {
+    color: var(--clr-accent1);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+
+}
+
+
+
 /* || Intro section */
 
+
+
 .intro {
+    
     position: relative;
     background: url(Images/wall.jpg);
     background-size: cover;
@@ -272,71 +230,75 @@ header {
     z-index: -10;
     background-position: center;
     overflow: hidden;
-    filter: grayscale(20%);
-      
+
 }
 
 .intro_img_container img {
-    display: flex;
-    
-
-        
+    /* display: flex; */
+    margin-top: 80px;
 }
 
 .intro__img {
-    justify-content: start;
+    /* justify-content: start; */
     box-shadow: var(--bs);
     margin-right: 20px;
-    border-radius: 15px; 
-    
+    border-radius: 15px;
+    max-width: 500px;
+
 }
 
+.intro_text_container {
+    /* display: flex; */
+}
 
-.intro_text_container > p {
-   z-index: -1;
-   margin-top: 100px;
+.intro_text_container h1 h2 p {
+
+}
+
+.intro_text_container>p {
+    z-index: -1;
+    margin-top: 100px;  
+    color: #fff;
+
 }
 
 .section__title--intro {
-    margin-top: 150px;  
-    margin-left: 50px;    
-   
+    margin-top: 150px;
+    margin-left: 50px;
+
 }
 
 
-@media (min-width: 600px) {
-    .intro {
-        /* display: grid; */    
-     /* th: min-content;
-  */        grid-column-gap: 1em;
-        grid-template-areas:
-            "img title"
-        /* grid-template-columns: min-content max-content; */
-            "img subtitle";
+    /* || About me section */
 
-        grid-template-columns: min-content max-content;
-    }
-
-
-    .intro__img {
-        max-width: 500px;
-        float: left;
-        /* min-width: 250px; */
-        /* position: relative; */
-        /* z-index: 2; */
-    }
-
-    .section__subtitle--intro {
-        align-self: start;
-        grid-column: -1/1;
-        grid-row: 2;
-        text-align: right;
+    .about-me {
+      
         position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
+        background: url(Images/wall.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* z-index: -10; */
+        background-position: center;
+        overflow: hidden;
+
     }
 
-    /* My services section */
+    .about_img_container {
+        display: flex;
+    }
+
+    .about-me__img {
+        justify-content: start;
+        box-shadow: var(--bs);
+        margin-right: 20px;
+        border-radius: 15px;
+        max-width: 500px;
+    }
+
+}
+
+    /* || My services section */
+
     .my-services {
 
         background-color: var(--clr-dark);
@@ -390,147 +352,13 @@ header {
     }
 
 
-    .about-me {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    @media (min-width: 600px) {
-        .about-me {
-            display: grid;
-            grid-template-columns: 1fr 200px;
-            grid-template-areas:
-                "title img"
-                "subtitle img"
-                "text img";
-            grid-column-gap: 2em;
-        }
-
-        .section__title--about {
-            grid-area: title;
-        }
-
-        .section__subtitle--about {
-            grid-column: 1 /-1;
-            grid-row: 2;
-            position: relative;
-            left: -1em;
-            width: calc(100% + 2em);
-            padding-left: 1em;
-            padding-right: calc(200px + 4em);
-        }
-    }
-
-    .about-me__img {
-        grid-row: 1 /-1;
-        grid-column: 2;
-        z-index: 2;
-        box-shadow: var(--bs);
-    }
-
-}
-
-/* || My work */
-
-.my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-background);
-    text-align: center;
-}
-
-.left {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.right {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.from-left {
-    transform: translateX(-50%);
-}
-
-.from-right {
-    transform: translateX(50%);
-}
-
-.from-right,
-.from-left {
-    transition: opacity 250ms ease-in, transform 600ms ease-in;
-    opacity: 0;
-}
-
-.from-right.appear,
-.from-left.appear {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.portfolio>.left>p,
-.portfolio>.right>p {
-    padding: 15px;
-}
-
-.portfolio__item {
-    overflow: hidden;
-    box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.1);
-
-
-}
-
-.portfolio__img {
-    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-}
-
-.portfolio__item:focus {
-    position: relative;
-    z-index: 2;
-}
-
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .5;
-}
-
-.my_work_buttons {
-    display: flex;
-    justify-content: center;
-
-}
-
-.my_work_links {
-    margin-right: 15px;
-    width: 150px;
-    border: none;
-    background-color: var(--clr-light)  ;
-    color: var(--clr-accent1)  ;
-    height: 35px;
-    border-radius: 30px;
-    margin-top: 10px;    
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
-}
-
-.my_work_links:hover {
-    background-color: var(--clr-accent1)  ;
-    color: var(--clr-light)  ;
-    cursor: pointer;
-}
- 
 /* || Contact Me */
 
-#contact_me {    
+#contact_me {
     background: url(Images/contact_me_background_pen.jpg);
-    position: relative;    
-    background-size: cover;    
-    background-repeat: no-repeat;    
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
 }
@@ -546,15 +374,15 @@ h2+p {
     margin-top: 150px;
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 .contact_left {
     flex-basis: 60%;
-    
+
 }
 
-.contact_right a{
+.contact_right a {
     color: #fff;
     text-decoration: none;
     margin: 0px 10px;
@@ -566,8 +394,8 @@ h2+p {
 
 #contact_me>p {
     margin-bottom: 60px;
-    text-align: center;   
-    background-color: var(--clr-accent1)  ;
+    text-align: center;
+    background-color: var(--clr-accent1);
 }
 
 .honeypot {
@@ -613,21 +441,21 @@ label {
 
 }
 
-.contact_buttons{
+.contact_buttons {
     width: 150px;
     border: none;
-    background-color: var(--clr-light)  ;
-    color: var(--clr-accent1)  ;
+    background-color: var(--clr-light);
+    color: var(--clr-accent1);
     height: 35px;
     border-radius: 30px;
-    margin-top: 10px;   
+    margin-top: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 }
 
 .contact_buttons:hover {
-    background-color: var(--clr-accent1)  ;
-    color: var(--clr-light)  ;
+    background-color: var(--clr-accent1);
+    color: var(--clr-light);
     cursor: pointer;
 }
 
@@ -693,7 +521,7 @@ label {
 }
 
 .footer_icon {
-    color: var(--clr-light)  ;
+    color: var(--clr-light);
     margin: 0px;
 
 }
