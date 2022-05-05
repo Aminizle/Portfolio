@@ -525,12 +525,11 @@ header {
 /* || Contact Me */
 
 #contact_me {
-    background: url(Images/contact_background.jpg);
+    
+    background: url(Images/contact_me_background_pen.jpg);
     position: relative;    
-    background-size: cover;
-    
-    background-repeat: no-repeat;
-    
+    background-size: cover;    
+    background-repeat: no-repeat;    
     background-position: center;
     overflow: hidden;
     filter: grayscale(20%);
@@ -538,6 +537,7 @@ header {
 
 #contact_me>h2,
 h2+p {
+    color: #fff;
     margin-top: 50px;
     text-align: center;
 }
@@ -551,15 +551,13 @@ h2+p {
 
 .contact_left {
     flex-basis: 60%;
-    /* padding: 40px 60px; */
-    /* background-color: var(--clr-accent1)  ; */
-
+    
 }
 
 .contact_right a{
-    /* flex-basis: 40%; */
-    /* padding: 40px; */
+    color: #fff;
     text-decoration: none;
+    margin: 0px 10px;
 }
 
 #contact_me label {
@@ -568,13 +566,11 @@ h2+p {
 
 #contact_me>p {
     margin-bottom: 60px;
-    text-align: center;
-    /* padding-right: 50px; */
+    text-align: center;   
     background-color: var(--clr-accent1)  ;
 }
 
 .honeypot {
-
     display: none;
 }
 
@@ -640,17 +636,12 @@ label {
 
 }
 
-
-a {
-    margin: 0px 10px;
-}
-
 .contact_info_a {
     margin-bottom: 20px;
     display: flex;
 }
 
-i {
+#contact_me i {
     color: var(--clr-accent1)  ;
 }
 
@@ -666,7 +657,7 @@ i {
 }
 
 .footer a {
-    color: inherit
+    color: inherit;
 }
 
 .footer-link {
@@ -684,7 +675,7 @@ i {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    /* margin: 2em 0 0; */
     padding: 0;
 }
 
