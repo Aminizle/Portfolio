@@ -222,7 +222,13 @@ header {
 
 
 .intro {
-    
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-template-areas:
+        "img    title"
+        "img    subtitle";
+    grid-template-columns:  min-content max-content;
     position: relative;
     background: url(Images/wall.jpg);
     background-size: cover;
@@ -234,12 +240,11 @@ header {
 }
 
 .intro_img_container img {
-    /* display: flex; */
     margin-top: 80px;
 }
 
 .intro__img {
-    /* justify-content: start; */
+    grid-area: img;
     box-shadow: var(--bs);
     margin-right: 20px;
     border-radius: 15px;
@@ -248,108 +253,110 @@ header {
 }
 
 .intro_text_container {
-    /* display: flex; */
 }
 
-.intro_text_container h1 h2 p {
-
-}
+.intro_text_container h1 h2 p {}
 
 .intro_text_container>p {
+    grid-column: -1 /1;
+    grid-row: 2;
     z-index: -1;
-    margin-top: 100px;  
+    text-align: left;
+    margin-top: 100px;
     color: #fff;
+    position: relative;
+    left: 2em;
+    width: calc(150% + 10.5em);
 
 }
 
 .section__title--intro {
     margin-top: 150px;
-    margin-left: 50px;
 
 }
 
 
-    /* || About me section */
+/* || About me section */
 
-    .about-me {
-      
-        position: relative;
-        background: url(Images/wall.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* z-index: -10; */
-        background-position: center;
-        overflow: hidden;
+.about-me {
 
-    }
-
-    .about_img_container {
-        display: flex;
-    }
-
-    .about-me__img {
-        justify-content: start;
-        box-shadow: var(--bs);
-        margin-right: 20px;
-        border-radius: 15px;
-        max-width: 500px;
-    }
+    position: relative;
+    background: url(Images/wall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: -10; */
+    background-position: center;
+    overflow: hidden;
 
 }
 
-    /* || My services section */
+.about_img_container {
+    display: flex;
+}
 
-    .my-services {
+.about-me__img {
+    justify-content: start;
+    box-shadow: var(--bs);
+    margin-right: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+}
 
-        background-color: var(--clr-dark);
-        background-image: url(../Images/bed.jpg);
+}
 
-        background-size: cover;
-        background-blend-mode: multiply;
-        color: var(--clr-background);
-        text-align: center;
-    }
+/* || My services section */
 
-    .section__title--services {
-        color: var(--clr-accent1);
-        position: relative;
-    }
+.my-services {
 
-    .section__title--services::after {
-        content: '';
-        display: block;
-        width: 2em;
-        height: 1px;
-        margin: 0.5em auto 1em;
-        background: var(--clr-background);
-        opacity: 0.25;
-    }
+    background-color: var(--clr-dark);
+    background-image: url(../Images/bed.jpg);
+
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-background);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent1);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-background);
+    opacity: 0.25;
+}
+
+.services {
+    max-width: 500px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+
+.services.appear {
+    opacity: 1;
+}
+
+@media (min-width: 800px) {
 
     .services {
-        max-width: 500px;
-        margin: 0 auto;
-        opacity: 0;
-        transition: opacity 1000ms ease-in;
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .services.appear {
-        opacity: 1;
+    .service+.service {
+        margin-left: 2em;
     }
 
-    @media (min-width: 800px) {
-
-        .services {
-            display: flex;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .service+.service {
-            margin-left: 2em;
-        }
-
-    }
+}
 
 
 /* || Contact Me */
