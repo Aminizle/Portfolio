@@ -12,7 +12,8 @@
 
     --clr-background: rgb(241, 239, 239);
     --clr-dark: #363434;
-    --clr-accent: #0CA4BD;
+    --clr-accent1: #FF7700;
+    --clr-accent2: #0CA4BD;
     --clr-light: #fff;
 
     /* font size */
@@ -30,11 +31,11 @@
 /* @media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
-        /* --fs-h2: 3.75rem; */
+        --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.125rem;
     }
-}  */
+} */
 
 /* General styles */
 
@@ -60,19 +61,13 @@ section {
     min-height: 800px;
 }
 
-/* 
-img {
-    display: block; 
-    max-width: 100%;
-} 
-*/
 
 strong {
     font-weight: var(--fw-bold)
 }
 
 :focus {
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-accent1);
     outline-offset: 3px;
 }
 
@@ -80,7 +75,7 @@ strong {
 .btn {
     padding: .5em 2.5em;
     background: var(--clr-light)  ;
-    color: var(--clr-accent);
+    color: var(--clr-accent1);
     text-decoration: none;
     cursor: pointer;   
     border-radius: 30px;
@@ -91,9 +86,10 @@ strong {
 
 .btn:hover {
     transform: scale(1.4);
-    background: var(--clr-accent);
+    background: var(--clr-accent1);
     color: var(--clr-light)  ;
 }
+
 
 /* Typography */
 h1,
@@ -119,9 +115,19 @@ h4 {
     font-size: var(--fs-h4);
 }
 
+.intro_text_container{
+    color: #fff;
+    
+}
+
+.intro_img_container{
+    margin-top: 80px;
+}
+
 .section__title {
     margin-bottom: .25em;
-
+    
+    
 }
 
 .section__title--intro {
@@ -132,26 +138,31 @@ h4 {
 
 .section__title--intro strong {
     display: block;
+    
+    
 }
 
 
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
+    
 }
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--clr-accent);
+    background: var(--clr-accent1);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
-    margin-bottom: 1em;
+    margin-bottom: 1em;    
+    
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
+    color: var(--clr-accent1);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
+    
 }
 
 /* || header & Nav */
@@ -172,7 +183,7 @@ header {
     position: fixed;
     margin-top: 15px;   
     z-index: 200;
-    border: 1px solid var(--clr-accent)  ;
+    border: 1px solid var(--clr-accent1)  ;
     border-radius: 30px;
     background: hsl(0 0% 100% /0.1);
     backdrop-filter: blur(1rem);
@@ -195,11 +206,11 @@ header {
     
     text-decoration: none;
     backdrop-filter: blur(1rem);
-    color: var(--clr-accent)  ;
+    color: var(--clr-accent1)  ;
 }
 
 .nav__list> .nav__item >a:hover {
-    background-color: var(--clr-accent)  ;
+    background-color: var(--clr-accent1)  ;
     color: var(--clr-light)  ;
 }
 
@@ -235,7 +246,7 @@ header {
     }
 
     .nav-toggle[aria-expanded='true'] {
-        background: var(--clr-accent)  ;
+        background: var(--clr-accent1)  ;
     }
 }
 
@@ -253,13 +264,20 @@ header {
 
 .intro {
     position: relative;
-    background-image: url(Images/intro.jpg);
+    background: url(Images/wall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: -10;
+    background-position: center;
+    overflow: hidden;
+    filter: grayscale(20%);
       
 }
 
 .intro_img_container img {
     display: flex;
+    
+
         
 }
 
@@ -267,8 +285,10 @@ header {
     justify-content: start;
     box-shadow: var(--bs);
     margin-right: 20px;
+    border-radius: 15px; 
     
 }
+
 
 .intro_text_container > p {
    z-index: -1;
@@ -277,8 +297,7 @@ header {
 
 .section__title--intro {
     margin-top: 150px;  
-    margin-left: 50px;
-      
+    margin-left: 50px;    
    
 }
 
@@ -328,7 +347,7 @@ header {
     }
 
     .section__title--services {
-        color: var(--clr-accent);
+        color: var(--clr-accent1);
         position: relative;
     }
 
@@ -489,7 +508,7 @@ header {
     width: 150px;
     border: none;
     background-color: var(--clr-light)  ;
-    color: var(--clr-accent)  ;
+    color: var(--clr-accent1)  ;
     height: 35px;
     border-radius: 30px;
     margin-top: 10px;    
@@ -498,42 +517,60 @@ header {
 }
 
 .my_work_links:hover {
-    background-color: var(--clr-accent)  ;
+    background-color: var(--clr-accent1)  ;
     color: var(--clr-light)  ;
     cursor: pointer;
 }
  
 /* || Contact Me */
 
+#contact_me {
+    background: url(Images/contact_background.jpg);
+    position: relative;    
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    z-index: -10;
+    background-position: center;
+    overflow: hidden;
+    filter: grayscale(20%);
+}
+
 #contact_me>h2,
 h2+p {
+    margin-top: 50px;
     text-align: center;
 }
 
 .contact_box {
+    margin-top: 150px;
     display: flex;
     justify-content: space-around;
-
+    
 }
 
 .contact_left {
     flex-basis: 60%;
     /* padding: 40px 60px; */
-    /* background-color: var(--clr-accent)  ; */
+    /* background-color: var(--clr-accent1)  ; */
 
 }
 
-.contact_right {
+.contact_right a{
     /* flex-basis: 40%; */
     /* padding: 40px; */
+    text-decoration: none;
+}
 
+#contact_me label {
+    color: #fff;
 }
 
 #contact_me>p {
     margin-bottom: 60px;
     text-align: center;
     /* padding-right: 50px; */
-    background-color: var(--clr-accent)  ;
+    background-color: var(--clr-accent1)  ;
 }
 
 .honeypot {
@@ -584,7 +621,7 @@ label {
     width: 150px;
     border: none;
     background-color: var(--clr-light)  ;
-    color: var(--clr-accent)  ;
+    color: var(--clr-accent1)  ;
     height: 35px;
     border-radius: 30px;
     margin-top: 10px;   
@@ -593,7 +630,7 @@ label {
 }
 
 .contact_buttons:hover {
-    background-color: var(--clr-accent)  ;
+    background-color: var(--clr-accent1)  ;
     color: var(--clr-light)  ;
     cursor: pointer;
 }
@@ -614,18 +651,18 @@ a {
 }
 
 i {
-    color: var(--clr-accent)  ;
+    color: var(--clr-accent1)  ;
 }
 
 /* || footer */
 
 .footer {
 
-    color: var(--clr-accent);
+    color: var(--clr-accent1);
     text-align: center;
     pad: 2.5em 0;
     font-size: var(--fs-h3);
-    background-color: var(--clr-accent)  ;
+    background-color: var(--clr-accent1)  ;
 }
 
 .footer a {
