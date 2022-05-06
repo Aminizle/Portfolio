@@ -37,7 +37,11 @@
     }
 } */
 
-/* General styles */
+
+/*-- -------------------------- -->
+<---        General styles      -->
+<--- -------------------------- -*/
+
 
 html {
     scroll-behavior: smooth;
@@ -74,7 +78,11 @@ strong {
     outline-offset: 3px;
 }
 
-/* Buttons */
+
+/*-- -------------------------- -->
+<---          Buttons           -->
+<--- -------------------------- -*/
+
 .btn {
     padding: .5em 2.5em;
     background: var(--clr-light);
@@ -94,7 +102,10 @@ strong {
 }
 
 
-/* Typography */
+/*-- -------------------------- -->
+<---          Typography        -->
+<--- -------------------------- -*/
+
 h1,
 h2,
 h3 {
@@ -118,7 +129,10 @@ h4 {
     font-size: var(--fs-h4);
 }
 
-/* || header & Nav */
+
+/*-- -------------------------- -->
+<---     header & Nav           -->
+<--- -------------------------- -*/
 
 header {
     display: flex;
@@ -178,7 +192,9 @@ header {
 }
 
 
-/*  || General Section */
+/*-- -------------------------- -->
+<---  || General Section        -->
+<--- -------------------------- -*/
 
 .section__title {
     margin-bottom: .25em;
@@ -217,9 +233,9 @@ header {
 
 
 
-/* || Intro section */
-
-
+/*-- -------------------------- -->
+<---  || Intro Section          -->
+<--- -------------------------- -*/
 
 .intro {
     display: grid;
@@ -230,12 +246,14 @@ header {
         "img    subtitle";
     grid-template-columns:  min-content max-content;
     position: relative;
+    background-color: firebrick;
     background: url(Images/wall.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -10;
+    /* z-index: -10; */
     background-position: center;
     overflow: hidden;
+
 
 }
 
@@ -276,7 +294,10 @@ header {
 }
 
 
-/* || About me section */
+
+/*-- -------------------------- -->
+<---  || About me Section       -->
+<--- -------------------------- -*/
 
 .about-me {
 
@@ -302,9 +323,11 @@ header {
     max-width: 500px;
 }
 
-}
 
-/* || My services section */
+
+/*-- -------------------------- -->
+<---  || My services Section    -->
+<--- -------------------------- -*/
 
 .my-services {
 
@@ -359,7 +382,9 @@ header {
 }
 
 
-/* || Contact Me */
+/*-- -------------------------- -->
+<---  || Contact Me Section     -->
+<--- -------------------------- -*/
 
 #contact_me {
     background: url(Images/contact_me_background_pen.jpg);
@@ -480,7 +505,10 @@ label {
     color: var(--clr-accent1);
 }
 
-/* || footer */
+
+/*-- -------------------------- -->
+<---  || Footer Section         -->
+<--- -------------------------- -*/
 
 .footer {
     color: var(--clr-accent1);
@@ -503,8 +531,6 @@ label {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
     margin: 0px;
-
-
 
 }
 
